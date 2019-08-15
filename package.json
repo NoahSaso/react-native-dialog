@@ -19,13 +19,14 @@
   ],
   "author": "Mazzarolo Matteo",
   "license": "MIT",
-  "homepage": "https://github.com/mmazzarolo/react-native-dialog",
+  "homepage": "https://github.com/NoahSaso/react-native-dialog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmazzarolo/react-native-dialog"
+    "url": "https://github.com/NoahSaso/react-native-dialog"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
+    "react-native-keyboard-spacer": "^0.4.1",
     "react-native-modal": "^9.0.0"
   },
   "devDependencies": {

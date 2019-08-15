@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, View } from "react-native";
+import { Platform, StyleSheet, View } from "react-native";
 import AnimatedModal from "react-native-modal";
+import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 const IOS_MODAL_ANIMATION = {
   from: { opacity: 0, scale: 1.2 },
@@ -78,8 +79,7 @@ export default class DialogContainer extends React.PureComponent {
         animationOut={"fadeOut"}
         {...otherProps}
       >
-        <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
+        <View
           style={styles.container}
         >
           <View style={[styles.content, contentStyle]}>
@@ -102,7 +102,8 @@ export default class DialogContainer extends React.PureComponent {
               </View>
             )}
           </View>
-        </KeyboardAvoidingView>
+        </View>
+        <KeyboardSpacer />
       </AnimatedModal>
     );
   }
